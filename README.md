@@ -27,6 +27,12 @@ Install the package and dependencies:
 First time set-up:
 `./node_modules/.bin/cypress install`
 
+## Folders and their Purposes!
+- Fixtures: Test data!
+- Integration: Our test specifications.
+- Plugins: Add-ons to expand on Cypress' functionality.
+- Support: Scripts; an area where we can add on to Cypress if needed.
+
 ## Resources
 - [Cypress (Official Website)](https://www.cypress.io/)
 - [End-to-End Web Testing with Cypress (O'Reilly Book)](https://www.oreilly.com/library/view/end-to-end-web-testing/9781839213854/)
