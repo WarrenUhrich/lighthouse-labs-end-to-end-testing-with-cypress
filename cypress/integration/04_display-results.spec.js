@@ -8,15 +8,18 @@ describe('test result display for album searches', () => {
             'GET', // METHOD
             '**/search*', // WEB ADDRESS MATCHING (* = wildcard)
             {fixture: 'itunes'} // Replace response with OUR itunes data.
-        );
+        ).as('itunesAPIRequest'); // ALIAS, we can use this to check on this promise later!
 
         // Find the input field, and type in a search.
         cy.get('[type="text"]')
             .type('Daft Punk');
 
+        cy.wait('@itunesAPIRequest'); // WAIT FOR INTERCEPT TO RESOLVE!
+
         // Check if a particular album is present.        
-        cy.get('.album') // FAILED! This happens before the data is loaded...
-            // .contains('TRON: Legacy Reconfigured')
-            .should('contain', 'TRON: Legacy Reconfigured');
+        cy.get('.album')
+            .first()
+            .contains('Random Access Memories');
+            //.should('contain', 'TRON: Legacy Reconfigured');
     });
 });
