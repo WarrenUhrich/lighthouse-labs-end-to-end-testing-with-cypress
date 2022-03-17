@@ -20,6 +20,13 @@
     - This makes it easy to share with clients, fellow team-members, and stakeholders in a project!
 - One of the best documentations available for free software!
 
+## Setting up Cypress
+Install the package and dependencies:
+`npm i cypress --save-dev`
+
+First time set-up:
+`./node_modules/.bin/cypress install`
+
 ## Resources
 - [Cypress (Official Website)](https://www.cypress.io/)
 - [End-to-End Web Testing with Cypress (O'Reilly Book)](https://www.oreilly.com/library/view/end-to-end-web-testing/9781839213854/)
