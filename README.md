@@ -33,6 +33,11 @@ First time set-up:
 - Plugins: Add-ons to expand on Cypress' functionality.
 - Support: Scripts; an area where we can add on to Cypress if needed.
 
+## Common Commands
+- Describe to write a description for a block of tests.
+- It is used for a specific test.
+- [cy.visit() can visit web pages](https://docs.cypress.io/api/commands/visit#Syntax)
+
 ## Resources
 - [Cypress (Official Website)](https://www.cypress.io/)
 - [End-to-End Web Testing with Cypress (O'Reilly Book)](https://www.oreilly.com/library/view/end-to-end-web-testing/9781839213854/)
