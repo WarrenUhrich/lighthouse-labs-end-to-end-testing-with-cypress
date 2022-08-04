@@ -1,6 +1,6 @@
 # Lighthouse Labs | End-to-End Testing with Cypress
 
-* [ ] What is Cypress?
+* [X] What is Cypress?
 * [ ] Getting Started with Cypress
 
 ## Jest
