@@ -1,9 +1,11 @@
-
-
 describe('tests for checkboxes', () => {
 
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
     it('can uncheck the Explicit checkbox', () => {
-        cy.visit('/'); // Visit our app home page.
+        // cy.visit('/'); // Visit our app home page.
 
         cy.get('.filters__checkbox') // Grab all checkboxes.
           .first() // Grab only the first match.
@@ -12,7 +14,7 @@ describe('tests for checkboxes', () => {
     });
 
     it('can check the Single checkbox', () => {
-        cy.visit('/'); // Visit our app home page.
+        // cy.visit('/'); // Visit our app home page.
 
         cy.get('#Single')
           .click()
