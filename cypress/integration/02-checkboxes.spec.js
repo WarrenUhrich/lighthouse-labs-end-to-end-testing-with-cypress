@@ -1,12 +1,24 @@
 describe('tests for checkboxes', () => {
 
-    it('can uncheck the "Explicit" checkbox', () => {
+    beforeEach(() => {
 
-        cy.visit('http://localhost:3000');
+        cy.visit('/');
+
+    });
+
+    it('can uncheck the "Explicit" checkbox', () => {
 
         cy.get('#Explicit')
           .uncheck()
           .should('not.be.checked');
+
+    });
+
+    it('can check the "Single" checkbox', () => {
+
+        cy.get('#Single')
+          .check()
+          .should('be.checked');
 
     });
 
