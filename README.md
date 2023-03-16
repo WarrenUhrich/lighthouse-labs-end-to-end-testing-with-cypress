@@ -18,6 +18,7 @@ We used Jest last day to write some unit / integration tests.
 * Automated testing
 
 Pros of Jest?
+
 * Quick to write targetted / technical tests
 * Excels at unit / integration tests
 * Very easy to test at an atomic level (turn off, or don't call what isn't needed)
