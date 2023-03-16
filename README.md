@@ -1,6 +1,6 @@
 # Lighthouse Labs | End-to-End Testing with Cypress
 
-[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-end-to-end-testing-with-cypress/tree/2023.03.16-web-flex-day-17oct2022) | [Vimeo Video Recording (Coming Soon!)](#coming-soon)
+[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-end-to-end-testing-with-cypress/tree/2023.03.16-web-flex-day-17oct2022) | [Vimeo Video Recording](https://vimeo.com/808818228/d9e8ca3bb7)
 
 * [X] What is Cypress?
 * [X] Getting Started with Cypress
