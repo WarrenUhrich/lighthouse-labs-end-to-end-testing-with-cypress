@@ -1,7 +1,7 @@
 describe('tests for search input form field', () => {
 
     beforeEach(() => {
-        cy.visit('http://localhost:3000/');
+        cy.visit('/');
 
         cy.get('[name="search"]')
           .as('searchInput');
