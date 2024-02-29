@@ -1,53 +1,95 @@
 # Lighthouse Labs | End-to-End Testing with Cypress
 
-* [ ] What is Cypress?
-* [ ] Getting Started with Cypress
+[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-end-to-end-testing-with-cypress/tree/2024.02.29-web-immersive-a-east-8january2024) | [Vimeo Video Recording](https://vimeo.com/918070137/b4d6d0a986?share=copy)
 
-## Unit and Integration Testing
+* [X] What is Cypress?
+* [X] Getting Started with Cypress
 
-* Unit Test: Testing a particular chunk code (often a function!)
-* Integration Test: How units work together, or how a piece of the app works with multiple parts.
+## Unit and Integration
 
-## What was Jest Good At?
+* Unit: testing a single piece of code (function / component)
+* Integration: testing how units work *together*
 
-* Unit Testing
-* Integration Testing
-* Tooled specifically with React in-mind
+We used Jest last day to write some unit / integration tests.
+
 * Jest is a testing framework
-* Pros of using Jest
-    * Debugging feature!
-    * Instant, very fast to refresh and see the new result!
-    * Step-by-step, can easily work incrementally
-    * Mature CLI tooling
-    * Integrates well with Git/GitHub
+* CLI tool
+* Originally intended for React
+* Automated testing
 
-## End-to-End Testing?
+Pros of Jest?
 
-Testing the application more as a whole, "big picture!" Often this means testing major user stories or features in the app. Often ends up being a test from the user's perspective.
+* Quick to write targetted / technical tests
+* Excels at unit / integration tests
+* Very easy to test at an atomic level (turn off, or don't call what isn't needed)
+* Easy mocking of functions (also avail. in Cypress)
+* Very fast, very efficient
+* Integrates nicely with our Git / GitHub repos (also avail. in Cypress)
 
-## Cypress! A general end-to-end testing software.
+## End-to-End
 
-Cypress is a robust, premium (yet free-to-use) software capable of running browser-based end-to-end tests.
+* End-to-End: "simulate" user behaviour; test whole user stories
 
-Pros:
-* More all-encompassed testing!
-* How much major functionality is tested? We can hit a lot of coverage with Cypress!
-* We understand what the user ends up seeing or ends up being able to do.
-* It can click through, type, navigate, etc. faster than a person in a browser
-* Is able to take screenshots of pages/steps during tests
-* Is able to take videos of pages/steps during tests
-* Cypress is language / stack agnostic (you don't need to know the source code! Just need to be able to see the project in the browser)
-* Documentation is very premium
+Cypress! What is it?
 
-Cons:
-* Cypress is more intensive (both in time and resources) than most CLI unit/integration testing options
-* Slower than most unit/integration test options
-* Intended for web (HTML/JSON) output, not really great for units like helper functions on their own
+* JavaScript Web Testing and Component Testing Framework
+* --> integration or end-to-end
+* Opens a browser window and navigates a web site like a end-user would
 
-## Getting Started with Cypress
+Pros of Cypress?
+* Easy mocking of functions (also avail. in Jest)
+* Integrates nicely with our Git / GitHub repos (also avail. in Jest)
+* Opens doors to testing responsive features
+* High confidence the app behaves appropriately for users
+* Able to watch the test process (help with debugging)
+* Tests more than just "code", we can check content, CSS, etc. potentially
+* Cypress is capable of taking screenshots and video recordings of its tests
+* Completely language / stack agnostic, can write tests for any web app you can access in the browser, local or otherwise
+* Documentation and UI are very mature and premium
 
-### Set-Up
+## About Cypress
 
-* `npm install cypress@9.7.0`
-* `./node_modules/.bin/cypress open`
-* Recommended: Add a script to `package.json` that runs Cypress
+Cypress is a very robust program, capable of automated testing. The documentation is top-tier, a true treat and pleasure to work with. Tests, similar to Jest/Mocha/Chai, are written in near-plain English, allowing for a wide array of team members to contribute to a project's quality assurance. Tests like these are expected to be run before (and during process of) launch of a project or version thereof—think of it as a safeguard step to prevent launching a project with missing or broken core features. As for quality assurance, Cypress is an amazing tool, ensuring the app is navigable and functional from the browser the same way a user would! It is capable of exporting screenshots and even video of tests and their results, making it great for easy sharing with a team or client. It is a very, very mature library and features an exceptional graphical user interface (GUI) toolset. It's specialties include wholistic integration and full-on end-to-end testing of applications. Because it can load both local files or external web pages/documents via a browser, you can even write tests involving (or exclusively encompassing) external projects of which you have no source-code access.
+
+## Setting up Cypress
+
+Install the package and dependencies:
+`npm i cypress --save-dev`
+
+First time set-up:
+`./node_modules/.bin/cypress install`
+
+Run cypress in-project via:
+`./node_modules/.bin/cypress open`
+
+## Folders/Files and their Purposes!
+
+* `/cypress.json`: Used to override default configuration values.
+* `/cypress/fixtures`: Test data; often in JSON.
+* `/cypress/integration`: Our test specifications.
+* `/cypress/plugins`: Add-ons to expand on Cypress' functionality.
+* `/cypress/support`: Scripts; an area where we can add on to Cypress if needed.
+
+## Common Commands
+
+* [describe(), it(), and beforeEach()](https://docs.cypress.io/guides/references/bundled-tools#Mocha) are afforded to us by Mocha.
+    * Describe is used to, well, describe a block of tests!
+    * It is used to label a specific test block / unit.
+    * BeforeEach allows us an opportunity to add code/setup that will run before each text in the block.
+* [cy.visit()](https://docs.cypress.io/api/commands/visit#Syntax) visits a web page.
+* [cy.get()](https://docs.cypress.io/api/commands/get) Retrieves an HTML element based on jQuery/CSS-like selectors.
+    * [<entity>.as()](https://docs.cypress.io/api/commands/as) Assign an alias for later use in cy.get() or cy.wait(), use an `@` in a selector to call upon an alias.
+* [<element>.find()](https://docs.cypress.io/api/commands/find) Retrieves a child element from inside of a selected element.
+* [cy.intercept()](https://docs.cypress.io/api/commands/intercept) Used for "spying" (checking for use of a particular request) or "stubbing" (replacing the response for a particular request.)
+* [cy.wait()](https://docs.cypress.io/api/commands/wait) Waits before proceding with test instructions.
+* [<element>.click()](https://docs.cypress.io/api/commands/click), [<element>.type()](https://docs.cypress.io/api/commands/type), [<element>.check()](https://docs.cypress.io/api/commands/check) are used to interact with elements and forms in a web page.
+
+## Resources
+
+* [Cypress (Official Website)](https://www.cypress.io/)
+* [Cypress Assertion Commands Doc](https://example.cypress.io/commands/assertions)
+* [`should` in Cypress](https://docs.cypress.io/api/commands/should)
+* [(Chai) Assert in Cypress](https://docs.cypress.io/guides/references/assertions)
+* Trouble in WSL2? [Follow the documentation carefully!](https://docs.cypress.io/guides/getting-started/installing-cypress#Windows-Subsystem-for-Linux)
+    * WSL2 requires X-Server, which usually requires Firewall tweaks to get through! It allows your Linux to reach Windows and render the program's GUI (Electron app: Cypress GUI.)
+* [End-to-End Web Testing with Cypress (O'Reilly Book)](https://www.oreilly.com/library/view/end-to-end-web-testing/9781839213854/)
