@@ -5,9 +5,6 @@
 * [X] What is Cypress?
 * [X] Getting Started with Cypress
 
-* [X] What is Cypress?
-* [X] Getting Started with Cypress
-
 ## Unit and Integration
 
 * Unit: testing a single piece of code (function / component)
